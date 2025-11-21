@@ -1,0 +1,90 @@
+/* Genel Sıfırlama ve Tema */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Çok açık mavi (AliceBlue) */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Başlık Stili */
+header {
+    background-color: #add8e6; /* Açık Mavi */
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+/* Ana İçerik Kapsayıcısı (Grid Düzeni) */
+.muzik-kapsayici {
+    display: grid;
+    /* Mobil için 2 sütunlu düzen, boşluklu */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Müzik Kutusu Stili (Tıklanabilir Resim) */
+.muzik-kutusu {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Müzik Kutusu Üzerine Gelince ve Tıklanınca Efekt */
+.muzik-kutusu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Oynatılan Müziği Vurgulama */
+.muzik-kutusu.aktif {
+    border: 5px solid #ffb6c1; /* Açık Pembe vurgu */
+    background-color: #ffe4e1; /* Soluk Pembe */
+    transform: scale(1.05); /* Biraz büyüt */
+}
+
+/* Resim Stili */
+.muzik-resim {
+    width: 100%;
+    height: auto;
+    max-height: 150px; /* Sabit yükseklik belirleyebiliriz */
+    object-fit: cover; /* Resmin kutuyu kaplamasını sağlar */
+    border-radius: 15px;
+    border: 3px solid #b0e0e6; /* Toz Mavi çerçeve */
+}
+
+/* Etiket Stili */
+.etiket {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #4682b4; /* Çelik Mavi */
+    margin-top: 10px;
+}
+
+/* Mobil Uyum (Daha küçük ekranlar için) */
+@media (max-width: 480px) {
+    .muzik-kapsayici {
+        /* Tek sütunlu düzen, daha büyük resimler */
+        grid-template-columns: 1fr; 
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    .muzik-resim {
+        max-height: 200px;
+    }
+}

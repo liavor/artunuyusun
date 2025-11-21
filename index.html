@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>😴 Alp'in Uyku Müzikleri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🌟 Alp'in Tatlı Rüyalar Müzikleri 🌙</h1>
+    </header>
+
+    <main class="muzik-kapsayici">
+        <div class="muzik-kutusu" onclick="playMusic('ninni1')">
+            <img src="ay.jpg" alt="Ay resmi" class="muzik-resim">
+            <p class="etiket">Sakin Ay</p>
+        </div>
+
+        <div class="muzik-kutusu" onclick="playMusic('ninni2')">
+            <img src="bulut.jpg" alt="Bulut resmi" class="muzik-resim">
+            <p class="etiket">Pofuduk Bulut</p>
+        </div>
+
+        <div class="muzik-kutusu" onclick="playMusic('ninni3')">
+            <img src="yildiz.jpg" alt="Yıldız resmi" class="muzik-resim">
+            <p class="etiket">Parlak Yıldız</p>
+        </div>
+
+        <div class="muzik-kutusu" onclick="playMusic('ninni4')">
+            <img src="ayıcık.jpg" alt="Ayıcık resmi" class="muzik-resim">
+            <p class="etiket">Sevimli Ayıcık</p>
+        </div>
+    </main>
+
+    <audio id="ninni1" src="ninni1.mp3" loop></audio>
+    <audio id="ninni2" src="ninni2.mp3" loop></audio>
+    <audio id="ninni3" src="ninni3.mp3" loop></audio>
+    <audio id="ninni4" src="ninni4.mp3" loop></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
